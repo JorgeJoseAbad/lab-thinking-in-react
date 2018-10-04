@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import _ from 'lodash';
+import './App.css';
 
 
 class ProductRow extends React.Component{
@@ -12,14 +13,12 @@ class ProductRow extends React.Component{
           {product.name}
         </span>;
     return(
-      <table style={{border:'1px solid red',margin:'10px'}}>
-          <tr >
 
+          <tr style={{border:'1px solid red',margin:'10px'}}>
             <td>{name}</td>
             <td>{product.price}</td>
-
           </tr>
-        </table>
+
     )
   }
 }
@@ -29,11 +28,15 @@ class ProductCategoryRow extends React.Component{
   render(){
      const category = this.props.category;
     return(
-      <tr style={{border:'1px solid yellow', margin:'10px'}}>
-        <th colSpan="2">
-          {category}
-        </th>
-      </tr>
+
+
+          <tr style={{border:'1px solid orange', margin:'10px'}}>
+            <th colSpan="2">
+              {category}
+            </th>
+          </tr>
+
+
     )
   }
 }
@@ -66,7 +69,7 @@ class ProductTable extends React.Component{
         );
       } //end if
       rows.push(
-        <ProductRow
+        <ProductRow style={{border:'1px solid magenta',margin:'10px'}}
           product={product}
           key={product.name} />
       );
@@ -189,7 +192,7 @@ render() {
   let data=_.sortBy(this.props.products.data,['category']);
 
     return (
-        <div>
+        <div className="div-principal">
             <h1>Title App: {this.props.title}</h1>
             <FilterableProductTable nombre={nombre} data={data}/>
         </div>

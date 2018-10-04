@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {App} from './src/app.js';
+import {App} from './src/App.js';
 import data from './src/data.json';
+import './src/App.css';
 
 
 
 ReactDOM.render(
-  <App title="Thinking in React" products={data}/>,
+  <App className="App" title="Thinking in React" products={data}/>,
   document.getElementById('root')
 );
 
