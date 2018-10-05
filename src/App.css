@@ -1,7 +1,12 @@
-.App{
-  background-color: magenta;
-}
+
 
 .div-principal{
+  border: 5px solid black;
   margin: 30px;
+  box-shadow: 8px 8px 5px 6px #886131b8;
+}
+
+.tr-product-category-row{
+  border:1px solid orange;
+  margin: 10px
 }

@@ -3,6 +3,7 @@ import _ from 'lodash';
 import './App.css';
 
 
+
 class ProductRow extends React.Component{
 
   render(){
@@ -14,7 +15,7 @@ class ProductRow extends React.Component{
         </span>;
     return(
 
-          <tr style={{border:'1px solid red',margin:'10px'}}>
+          <tr >
             <td>{name}</td>
             <td>{product.price}</td>
           </tr>
@@ -30,11 +31,12 @@ class ProductCategoryRow extends React.Component{
     return(
 
 
-          <tr style={{border:'1px solid orange', margin:'10px'}}>
+          <tr >
             <th colSpan="2">
               {category}
             </th>
           </tr>
+
 
 
     )
@@ -69,9 +71,11 @@ class ProductTable extends React.Component{
         );
       } //end if
       rows.push(
+
         <ProductRow style={{border:'1px solid magenta',margin:'10px'}}
           product={product}
           key={product.name} />
+        
       );
 
       lastCategory = product.category;
@@ -104,27 +108,20 @@ class SearchBar extends React.Component{
 /*handler to change props from child to parent */
 handleFilterTextChange(event){
   this.props.onFilterTextChange(event.target.value);
-
-
 }
 
 handleInStochChange(event){
   this.props.onInStockChange(event.target.checked);
-
 }
 
   render(){
-
-
     return(
-      <form style={{border:'1px solid blue',margin:'10px'}}>
+      <form style={{border:'1px solid blue',margin:'10px', padding:'10px'}}>
         <input
           type="text"
           placeholder="Enter... "
           value={this.props.filterText}
           onChange={this.handleFilterTextChange}
-
-
         />
         <p>
         <input
@@ -168,7 +165,7 @@ class FilterableProductTable extends React.Component{
 
   render(){
   return(
-    <div style={{border:'1px solid yellow'}}>
+    <div style={{border:'1px solid yellow',margin:'10px'}}>
       <SearchBar
         filterText={this.state.filterText}
         isStockOnly={this.state.isStockOnly}

@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {App} from './src/App.js';
+import {App} from './src/App';
+import './index.css';
 import data from './src/data.json';
-import './src/App.css';
+
 
 
 
