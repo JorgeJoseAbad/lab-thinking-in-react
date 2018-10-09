@@ -1,12 +1,21 @@
 
 
 .div-principal{
-  border: 5px solid black;
+  border: 3px solid black;
   margin: 30px;
+  padding: 10px;
   box-shadow: 8px 8px 5px 6px #886131b8;
+}
+
+.div-principal h1{
+  text-align: center;
 }
 
 .tr-product-category-row{
   border:1px solid orange;
   margin: 10px
+}
+
+table tbody{
+  border: 1px solid green;
 }
